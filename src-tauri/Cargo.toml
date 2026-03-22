@@ -1,0 +1,32 @@
+[package]
+name = "pdf-workzeug"
+version = "0.1.0"
+description = "Large-print desktop PDF merger built with Tauri"
+authors = ["Franc"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "pdf_workzeug_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.5.6" }
+
+[dependencies]
+base64 = "0.22"
+image = { version = "0.25", default-features = false, features = ["png"] }
+log = "0.4"
+lopdf = "0.36"
+pdfium-render = "0.8.37"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tauri = { version = "2.10.3" }
+tauri-plugin-dialog = "2.6.0"
+tauri-plugin-log = "2"
+tauri-plugin-opener = "2.5.3"
+tempfile = "3"

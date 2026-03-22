@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", ui-sans-serif, sans-serif;
+  color: #1c1c1c;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(245, 243, 239, 0.92)),
+    #f5f3ef;
+  --bg: #f5f3ef;
+  --paper: #ece7de;
+  --panel: rgba(255, 255, 255, 0.55);
+  --ink: #1c1c1c;
+  --muted: #5f5a52;
+  --line: rgba(28, 28, 28, 0.12);
+  --accent: #3b6ea5;
+  --accent-soft: rgba(59, 110, 165, 0.22);
+  --danger: #a93f34;
+  --warn-bg: #fff5df;
+  --warn-line: #f1d28c;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.font-heading {
+  font-family: "Source Serif 4", Georgia, serif;
+}
+
+.action-chip {
+  @apply inline-flex min-h-11 items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--paper)] px-4 text-[0.95rem] font-medium text-[var(--ink)] transition hover:border-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50;
+}
